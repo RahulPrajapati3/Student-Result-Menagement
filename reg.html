@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Prajapati Registration</title>
+    <link rel="stylesheet" href="reg.css">
+
+
+<body>
+
+<div class="form-container">
+<h2>Registration Form</h2>
+<label for="role"><h4>Select Role:</h4></label>
+<select id="role" name="role" onchange="toggleFields()">
+    <option value="">--Select--</option>
+    <option value="student">As Student</option>
+    <option value="teacher">As Teacher</option>
+</select>
+
+<div id="student-fields" style="display:none;">
+    <h3>Student Registration</h3>
+    <label for="student-name"><h4>Name:</h4></label>
+    <input type="text" id="student-name" name="student-name" required placeholder="Enter your name">
+
+    <label for="student-email"><h4>Email:</h4></label>
+    <input type="email" id="student-email" name="student-email" required placeholder="Enter your email">
+
+    <label for="student-bio"><h4>Password:</h4></label>
+    <input type="Password" id="Student-password" name="Student-password" required placeholder="Enter your password">
+    <!-- <textarea id="student-bio" name="student-bio" rows="1"></textarea> -->
+</div>
+
+<div id="teacher-fields" style="display:none;">
+    <h3>Teacher Registration</h3>
+    <label for="teacher-name"><h4>Name:</h4></label>
+    <input type="text" id="teacher-name" name="teacher-name" required  placeholder="Enter your name">
+
+    <label for="teacher-email"><h4>Email:</h4></label>
+    <input type="email" id="teacher-email" name="teacher-email" required  placeholder="Enter your email">
+
+    <!-- <label for="teacher-bio">Bio:</label>
+    <textarea id="teacher-bio" name="teacher-bio" rows="4"></textarea> -->
+    <label for="teacher-bio"><h4>Password:</h4></label>
+    <input type="Password" id="Teacher-password" name="Teacher-password" required placeholder="Enter your password">
+</div>
+
+<button type="submit">Register</button>
+</div>
+
+<script>
+function toggleFields() {
+    const role = document.getElementById('role').value;
+    document.getElementById('student-fields').style.display = (role === 'student') ? 'block' : 'none';
+    document.getElementById('teacher-fields').style.display = (role === 'teacher') ? 'block' : 'none';
+}
+</script> -->
+
+</body>
+</head>
+</html>
